@@ -1,5 +1,6 @@
-nav span {
+.logo {
   font-family: 'Bungee';
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -10,4 +11,15 @@ nav {
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
+}
+
+
+.nav-right {
+  display: flex;
+  justify-content: right;
+  /* text-align: center; */
+}
+
+.fa-angle-double-down {
+  color: orange;
 }
