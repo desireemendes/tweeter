@@ -1,0 +1,9 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #D4CCFE;
+background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+
+}
