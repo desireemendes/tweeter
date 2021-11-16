@@ -1,0 +1,61 @@
+.newtweet {
+  width: 90%
+}
+
+textarea {
+  
+    width: 100%;
+    border-bottom: 4px solid black;
+    outline: none;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    color: currentColor;
+    background: transparent;
+    font-size: 30px;
+    font-family: "Source Sans Pro", "sans-serif";
+    font-weight: 700;
+   
+  } 
+
+label {
+  font-family: 'bungee';
+  font-weight: 400;
+  font-size: 20px;
+}
+
+
+.submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  font-family: 'bungee';
+  font-weight: 400;
+  padding: 0.50em;
+}
+
+output {
+  font-family: 'bungee', 'Source Sans Pro';
+  display: flex;
+  justify-content: flex-end;
+  align-items: top;
+  
+}
+
+.tweet-text {
+  outline: none;
+  border: 0px;
+  border-bottom: 3px dotted;
+}
+
+
+.red {
+  color: red;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+} 
