@@ -10,3 +10,12 @@ header {
   margin-top: 120px;
   padding-top: 50px;
 }
+
+header img {
+  border: 5px solid orange;
+  }
+  
+  header h2 {
+    font-size: 24px;
+    display: flex;
+  }

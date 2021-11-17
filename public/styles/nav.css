@@ -23,7 +23,6 @@ nav {
 .nav-right {
   display: flex;
   justify-content: right;
-  /* text-align: center; */
 }
 
 .fa-angle-double-down {
