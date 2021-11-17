@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
-
+  
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
-    <!-- Fonts/Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css" />
+  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" />
-    <link rel="stylesheet" href="/styles/header.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;600&display=swap"
+      rel="stylesheet">
+  
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous" />
+  
+    <!--Timeago-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+    <!--Tweet CSS-->
     <link rel="stylesheet" href="/styles/new-tweet.css" />
     <link rel="stylesheet" href="/styles/tweets.css" />
-
-    <!-- External JS -->
+  
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" <!--HEADER CSS-->
+    <link rel="stylesheet" href="/styles/header.css" <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+  
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  
   </head>
 
   <body>
@@ -34,13 +49,16 @@
     <nav>
       <span class="logo">tweeter</span>
       <container class="nav-right">
-        <span><strong>Write</strong> a new tweet<br><i class="fas fa-angle-double-down"></i></span>
+        <!-- <span><strong>Write</strong> a new tweet<br><i class="fas fa-angle-double-down"></i></span> -->
+        <span><strong>Write</strong> a new tweet</span>
+        <i class="arrow fas fa-angle-double-down"></i>
       </container>
     </nav>
 
     <header>
       <div>
-          <img src="/images/profile-hex.png"> 
+          <!-- <img src="/images/profile-hex.png">  -->
+          <img src="/images/des.png">
       </div>
       <br>
       <div>
@@ -51,9 +69,9 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <!-- <form method="POST" action="/tweets"></form> -->
-        <form id="tweet-form" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
+        <form method="POST" action="/tweets">
+        <!-- <form id="tweet-form" action="/tweets"> -->
+          <label for="tweet-text">What's on your mind?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
             <output class="error"></output>
@@ -87,6 +105,8 @@
       </footer>
     </article>
   </article>
+
     </main>
   </body>
+  
 </html>

@@ -55,4 +55,29 @@ $(document).ready(function () {
       </article>`);
     return $tweet;
   }
+  //Gets tweets when the page loads
+  const loadTweets = function () {
+    $.ajax({
+      url: '/tweets',
+      success: (tweets) => {
+        renderTweets(tweets);
+      }
+    })
+  }
+  // Empties container and posts tweets in reverse-chronological order
+  const renderTweets = function (tweets) {
+    const $tweets = $(".tweets")
+    $tweets.empty();
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $tweets.prepend($tweet);
+    }
+  };
+});
+
+$('#tweet-form').on('submit', function (event) {
+  event.preventDefault();
+
+  const serializeData = $(this).serialize();
+
 })

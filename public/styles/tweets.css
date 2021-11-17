@@ -8,7 +8,7 @@
 }
 
 .tweets footer i:hover {
-  color: orange;
+  color: #f6bd60;
 }
 
 .tweets footer i {
@@ -23,7 +23,7 @@
   margin: 10px;
   }
   .tweets:hover{
-    box-shadow: 5px 5px orange
+    box-shadow: 5px 5px #f6bd60;
   }
   
   .tweets footer {
@@ -40,3 +40,15 @@
   .tweets span {
     text-align: right;
   }
+
+  /* .button {
+    font-size: 1.25em;
+    color: #e4f5e7;
+    animation: bounce 1.5s infinite;
+  }
+  
+  @keyframes bounce {
+    0%,  
+    100% {-webkit-transform: translateY(0);} 
+    50% {-webkit-transform: translateY(-10px);}
+  } */
