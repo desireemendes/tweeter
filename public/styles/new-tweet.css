@@ -41,6 +41,11 @@ button {
   border: 0;
 }
 
+button:hover {
+  box-shadow: 0.35rem 0.35rem 0 var(--color-shadow, #f6bd60);
+  --size-bezel: left: 0.5em; right: 0.5em;
+}
+
 output {
   font-family: 'bungee', 'Source Sans Pro';
   display: flex;
@@ -60,10 +65,6 @@ output {
 
 #tweet-text:focus {
   background-color: #f6bd60;
-}
-
-.red {
-  color: red;
 }
 
 .footer {
