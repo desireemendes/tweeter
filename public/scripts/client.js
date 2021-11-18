@@ -18,11 +18,11 @@ $(document).ready(function () {
   const createTweetElement = function (tweet) {
     console.log("mytweet", tweet);
     const $tweet = $(`
-  <article class="tweets">
+          <article class="tweets">
           <span class="tweeter-profile"></span>
             <img src="${tweet.user.avatars}"/>
             <h2>${tweet.user.name}</h2>
-            <span class="userhandle">
+            <div class="userhandle">
               <h2>${tweet.user.handle}</h2>
           </span>
           <div class="content">
@@ -51,7 +51,8 @@ $(document).ready(function () {
   //     $tweets.prepend($tweet);
   //   }
   // };
-
+  
+  // Empties container and posts tweets in reverse-chronological order
   const renderTweets = function (tweets) {
     const $tweets = $("#tweets-container")
     $("#tweets-container").empty();
@@ -95,7 +96,7 @@ $("#tweet-text").on('input', function (event) {
     } else {
       $('.new-tweet .error')
       .empty()
-     .hide()
+      .hide()
      $.post("/tweets", serializeData, (response) => {
       loadTweets();
       $("#tweet-text").val('')
