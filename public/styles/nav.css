@@ -8,13 +8,10 @@
 nav {
   height: 120px;
   width: 100%;
-  /* background-color: #313865; */
   background-color: #AF7595;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  /* z-index: -1;
-  position: relative; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,36 +20,28 @@ nav {
 }
 
 .nav-right {
-  /* display: flex;
-  justify-content: right; */
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 5%;
   line-height: 50px;
-  
 }
 
-/* .fa-angle-double-down {
-  color: #FED401;
-  display: flex;
-  justify-content: center;
-} */
 
 .arrow {
   font-size: 1.25em;
-  /* display: flex;
-  justify-content: center; */
   color: #f6bd60;
   animation: bounce 1.5s infinite;
 }
 
+/* Arrow animation */
 @keyframes bounce {
   0%,  
   100% {-webkit-transform: translateY(0);} 
   50% {-webkit-transform: translateY(-10px);}
 }
 
+/* Responsive design */
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
  nav {
    background-color: #FFD7D5;
@@ -61,7 +50,6 @@ nav {
 
 @media only screen and (min-width: 1024px) {
   nav {
-    /* background-color: #AF7595; */
     background-color: #fad2e1;
   }
 
