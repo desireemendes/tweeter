@@ -22,8 +22,8 @@ $(document).ready(function() {
           <span class="tweeter-profile"></span>
             <img src="${tweet.user.avatars}"/>
             <h2>${tweet.user.name}</h2>
-            <div class="userhandle">
-              <h2>${tweet.user.handle}</h2>
+            <div>
+              <h2 class="userhandle">${tweet.user.handle}</h2>
           </span>
           <div class="content">
             <h2>${tweet.content.text}</h2>
