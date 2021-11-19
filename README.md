@@ -6,10 +6,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["You can only type 140 characters or less otherwise an error message will slide down"](https://github.com/desireemendes/tweeter/blob/master/docs/toomanychars.gif?raw=true)
+## You can only type 140 characters or less otherwise an error message will slide down
+!["Screen recording of app"](https://github.com/desireemendes/tweeter/blob/master/docs/toomanychars.gif?raw=true)
 
+## Desktop version
 !["Desktop design"](https://github.com/desireemendes/tweeter/blob/master/docs/desktop.png?raw=true)
 
+## Mobile version
 !["Mobile design"](https://github.com/desireemendes/tweeter/blob/master/docs/mobile.png?raw=true)
 
 ## Getting Started
