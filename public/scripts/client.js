@@ -6,7 +6,7 @@
 
 
 //prevents cross-site scripting
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -14,8 +14,8 @@ const escape = function (str) {
 
 
 //takes in tweet object and returns it in html
-$(document).ready(function () {
-  const createTweetElement = function (tweet) {
+$(document).ready(function() {
+  const createTweetElement = function(tweet) {
     console.log("mytweet", tweet);
     const $tweet = $(`
           <article class="tweets">
@@ -42,68 +42,58 @@ $(document).ready(function () {
     return $tweet;
   };
 
-// Empties container and posts tweets in reverse-chronological order
-  // const renderTweets = function (tweets) {
-  //   const $tweets = $(".tweets")
-  //   $tweets.empty();
-  //   for (const tweet of tweets) {
-  //     const $tweet = createTweetElement(tweet);
-  //     $tweets.prepend($tweet);
-  //   }
-  // };
-  
   // Empties container and posts tweets in reverse-chronological order
-  const renderTweets = function (tweets) {
-    const $tweets = $("#tweets-container")
+  const renderTweets = function(tweets) {
+    const $tweets = $("#tweets-container");
     $("#tweets-container").empty();
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $("#tweets-container").prepend($tweet);
     }
-  }
+  };
 
   // Gets tweets when the page loads
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax({
       url: '/tweets',
       success: (tweets) => {
         renderTweets(tweets);
       }
-    })
-  }
+    });
+  };
   loadTweets();
-$("#tweet-text").on('input', function (event) {
-  $('.new-tweet .error').empty()
-})
+  $("#tweet-text").on('input', function(event) {
+    $('.new-tweet .error').empty();
+  });
 
-//Posts new tweets
-  $('#tweet-form').on('submit', function (event) {
+  //Posts new tweets
+  $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
 
     const serializeData = $(this).serialize();
 
-    const tweetLength = $('#tweet-text').val().length
+    const tweetLength = $('#tweet-text').val().length;
     if (tweetLength === 0) {
       $('.new-tweet .error')
-      .empty()
-      .append('Text field empty. Type something to tweet.')
-      .slideDown(1000);
+        .empty()
+        .append('Text field empty. Type something to tweet.')
+        .slideDown(1000);
     } else if (tweetLength > 140) {
       $('.new-tweet .error')
-      .empty()
-      .append('You typed too much. Try again.')
-      .slideDown(1000)
+        .empty()
+        .append('You typed too much. Try again.')
+        .slideDown(1000);
     } else {
       $('.new-tweet .error')
-      .empty()
-      .hide()
-     $.post("/tweets", serializeData, (response) => {
-      loadTweets();
-      $("#tweet-text").val('')
-      console.log(response);
-    });
+        .empty()
+        .hide();
+      $.post("/tweets", serializeData, (response) => {
+        loadTweets();
+        $("#tweet-text").val('');
+        console.log(response);
+      });
     }
 
-  })
+  });
 
 });
